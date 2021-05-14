@@ -9,9 +9,9 @@
         select id from member where phone = #{phone};
     </select>
 
-    <select id="test" resultType="String">
-        select id from member where phone = "010-8416-4996";
-    </select>
+    <update id="updatePassword" parameterType="String">
+        update member set pw = #{password} where id = #{id};
+    </update>
 
 
 

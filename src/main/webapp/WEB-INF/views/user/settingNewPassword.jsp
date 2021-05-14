@@ -30,24 +30,45 @@
     </style>
 </head>
 <body>
-<form action="/find/userpw" method="post">
+<form action="/set/password" method="post">
     <table align="center" class="flex-container">
         <tr>
             <td class="hello">
-                가입시 사용했던 아이디(이메일)을 입력해주세요
+                새로운 비밀번호를 입력해주세요
             </td>
         </tr>
         <tr>
             <td>
-                <input type="email" name="id">
+                새로운 비밀번호 :
+            </td>
+            <td>
+                <input type="password" id="password" name="password">
             </td>
         </tr>
         <tr>
             <td>
-                <input type="submit" value="비밀번호 찾기"/>
+                새로운 비밀번호 확인 :
+            </td>
+            <td>
+                <input type="password" id="newPassword" name="newPassword">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" id="submitValue" value="비밀번호 재설정"/>
             </td>
         </tr>
     </table>
 </form>
+<script>
+
+    $('#submitValue').submit(function(){
+        if($('#password').val() == $('#newPassword').val()) {
+            return true;
+        }
+        alert("비밀번호가 일치하지 않습니다.");
+    })
+
+</script>
 </body>
 </html>

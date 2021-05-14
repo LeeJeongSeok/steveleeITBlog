@@ -10,5 +10,5 @@ public interface UserMapper {
 
     String getUserId(@Param("phone") String phone);
 
-    String test();
+    void updatePassword(@Param("id") String id, @Param("password") String newPassword);
 }
